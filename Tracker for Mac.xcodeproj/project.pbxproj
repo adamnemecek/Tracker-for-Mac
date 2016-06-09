@@ -15,6 +15,10 @@
 		02DCC6EE1CE9CDFA00A49F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DCC6EC1CE9CDFA00A49F7D /* Main.storyboard */; };
 		02DCC6F91CE9CDFA00A49F7D /* Tracker_for_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DCC6F81CE9CDFA00A49F7D /* Tracker_for_MacTests.swift */; };
 		02DCC7041CE9CDFA00A49F7D /* Tracker_for_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DCC7031CE9CDFA00A49F7D /* Tracker_for_MacUITests.swift */; };
+		02DCC7121CE9CF5A00A49F7D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCC7111CE9CF5A00A49F7D /* GameKit.framework */; };
+		02DCC7151CE9CF8200A49F7D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCC7141CE9CF8200A49F7D /* CloudKit.framework */; };
+		02DCC7171CE9D1CE00A49F7D /* InitialViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DCC7161CE9D1CE00A49F7D /* InitialViewControllerProtocol.swift */; };
+		02DCC71B1CE9D22800A49F7D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DCC71A1CE9D22800A49F7D /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,11 @@
 		02DCC6FF1CE9CDFA00A49F7D /* Tracker for MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tracker for MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DCC7031CE9CDFA00A49F7D /* Tracker_for_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker_for_MacUITests.swift; sourceTree = "<group>"; };
 		02DCC7051CE9CDFA00A49F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02DCC7111CE9CF5A00A49F7D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		02DCC7131CE9CF5A00A49F7D /* Tracker for Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Tracker for Mac.entitlements"; sourceTree = "<group>"; };
+		02DCC7141CE9CF8200A49F7D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		02DCC7161CE9D1CE00A49F7D /* InitialViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewControllerProtocol.swift; sourceTree = "<group>"; };
+		02DCC71A1CE9D22800A49F7D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DCC7121CE9CF5A00A49F7D /* GameKit.framework in Frameworks */,
+				02DCC7151CE9CF8200A49F7D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +90,8 @@
 		02DCC6D51CE9CDFA00A49F7D = {
 			isa = PBXGroup;
 			children = (
+				02DCC7141CE9CF8200A49F7D /* CloudKit.framework */,
+				02DCC7111CE9CF5A00A49F7D /* GameKit.framework */,
 				02DCC6E01CE9CDFA00A49F7D /* Tracker for Mac */,
 				02DCC6F71CE9CDFA00A49F7D /* Tracker for MacTests */,
 				02DCC7021CE9CDFA00A49F7D /* Tracker for MacUITests */,
@@ -99,7 +112,10 @@
 		02DCC6E01CE9CDFA00A49F7D /* Tracker for Mac */ = {
 			isa = PBXGroup;
 			children = (
+				02DCC7131CE9CF5A00A49F7D /* Tracker for Mac.entitlements */,
 				02DCC6E11CE9CDFA00A49F7D /* AppDelegate.swift */,
+				02DCC7161CE9D1CE00A49F7D /* InitialViewControllerProtocol.swift */,
+				02DCC71A1CE9D22800A49F7D /* InitialViewController.swift */,
 				02DCC6E31CE9CDFA00A49F7D /* ViewController.swift */,
 				02DCC6E51CE9CDFA00A49F7D /* Document.swift */,
 				02DCC6EA1CE9CDFA00A49F7D /* Assets.xcassets */,
@@ -196,6 +212,21 @@
 				TargetAttributes = {
 					02DCC6DD1CE9CDFA00A49F7D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F5XA2GJLTZ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					02DCC6F31CE9CDFA00A49F7D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -258,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DCC71B1CE9D22800A49F7D /* InitialViewController.swift in Sources */,
 				02DCC6E91CE9CDFA00A49F7D /* Document.xcdatamodeld in Sources */,
+				02DCC7171CE9D1CE00A49F7D /* InitialViewControllerProtocol.swift in Sources */,
 				02DCC6E41CE9CDFA00A49F7D /* ViewController.swift in Sources */,
 				02DCC6E21CE9CDFA00A49F7D /* AppDelegate.swift in Sources */,
 				02DCC6E61CE9CDFA00A49F7D /* Document.swift in Sources */,
@@ -394,10 +427,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tracker for Mac/Tracker for Mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Tracker for Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.erminetics.Tracker-for-Mac";
+				PRODUCT_BUNDLE_IDENTIFIER = org.erminetics.Tracker.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -406,10 +441,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tracker for Mac/Tracker for Mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Tracker for Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.erminetics.Tracker-for-Mac";
+				PRODUCT_BUNDLE_IDENTIFIER = org.erminetics.Tracker.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -483,6 +520,7 @@
 				02DCC70A1CE9CDFA00A49F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02DCC70B1CE9CDFA00A49F7D /* Build configuration list for PBXNativeTarget "Tracker for MacTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +529,7 @@
 				02DCC70D1CE9CDFA00A49F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02DCC70E1CE9CDFA00A49F7D /* Build configuration list for PBXNativeTarget "Tracker for MacUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +538,7 @@
 				02DCC7101CE9CDFA00A49F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
